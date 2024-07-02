@@ -1,6 +1,14 @@
 const { sum, isPalindrome, fromEuroToDollar, fromEuroToBritish, oneEuroIs } = require("../src/app");
 
 describe("section 1", () => {
+    beforeAll(() => {
+        console.log("section 1 - Before all tests");
+    });
+
+    afterAll(() => {
+        console.log("section 1 - After all tests");
+    });
+
     function getRandomInt(max) {
         return Math.floor(Math.random() * max);
     }
@@ -16,7 +24,23 @@ describe("section 1", () => {
 
 
 describe("section 2", () => {
+    beforeAll(() => {
+        console.log("section 2 - Before all tests");
+    });
+
+    afterAll(() => {
+        console.log("section 2 - After all tests");
+    });
+
     describe("Positive tests", () => {
+        beforeAll(() => {
+            console.log("section 2 - Positive tests - Before all tests");
+        });
+
+        afterAll(() => {
+            console.log("section 2 - Positive tests - After all tests");
+        });
+
         test("should return true for a single letter", function () {
             expect(isPalindrome("a")).toBe(true);
         });
@@ -35,6 +59,14 @@ describe("section 2", () => {
     });
 
     describe("Negative tests", () => {
+        beforeAll(() => {
+            console.log("section 2 - Negative tests - Before all tests");
+        });
+
+        afterAll(() => {
+            console.log("section 2 - Negative tests - After all tests");
+        });
+
         test("should return false for a longer non-palindrome", function () {
             expect(isPalindrome("launchcode")).toBe(false);
         });
@@ -55,6 +87,14 @@ describe("section 2", () => {
 
 
 describe("section 3", () => {
+    beforeAll(() => {
+        console.log("section 3 - Before all tests");
+    });
+
+    afterAll(() => {
+        console.log("section 3 - After all tests");
+    });
+
     test("One euro should be 1.2 dollars", function () {
         // if 1 euro is 1.2 dollars, then 3.5 euros should be (3.5 * 1.2)
         const expected = 3.5 * oneEuroIs.USD;
