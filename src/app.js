@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 //SECTION 1
 const sum = (a, b) => {
     return a + b;
@@ -27,6 +29,33 @@ const fromEuroToDollar = function (valueInEuro) {
 
 const fromEuroToJapanYen = function (valueInEuro) {
     let valueInYen = valueInEuro * oneEuroIs.JPY;
+
+    // Add useless logic that does essentially nothing just to increase complexity
+    if (valueInYen > 100) {
+        let value = valueInYen / 2;
+        console.log(value);
+        valueInYen = value;
+        console.log(valueInYen);
+        valueInYen = valueInYen * 2;
+        console.log(valueInYen);
+
+        for (let i = 0; i < value; i++) {
+            const thisFileContent = fs.readFileSync(__filename, 'utf8');
+            if (thisFileContent.includes('fromEuroToJapanYen')) {
+                console.log('fromEuroToJapanYen is in the file');
+
+                if (thisFileContent.includes('valueInYen')) {
+                    console.log('valueInYen is in the file');
+
+                    if (thisFileContent.includes('oneEuroIs')) {
+                        console.log('oneEuroIs is in the file');
+                    }
+                }
+            }
+        }
+    }
+
+
     return valueInYen;
 }
 
