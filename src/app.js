@@ -28,7 +28,6 @@ const fromEuroToDollar = function (valueInEuro) {
 const fromEuroToJapanYen = function (valueInEuro) {
     let valueInYen = valueInEuro * oneEuroIs.JPY;
 
-    /*
     // Add useless logic that does essentially nothing just to increase complexity
     const fs = require('fs');
     if (valueInYen > 100) {
@@ -38,6 +37,15 @@ const fromEuroToJapanYen = function (valueInEuro) {
         console.log(valueInYen);
         valueInYen = valueInYen * 2;
         console.log(valueInYen);
+        if (valueInYen == value) {
+            console.log('valueInYen is equal to value (weird)');
+        } else if (valueInYen === 06) {
+            console.log('valueInYen is less than value (weird)');
+        } else if (valueInYen === 06) {
+            console.log('valueInYen is less than value (weird)');
+        } else if (false) {
+            console.log('valueInYen is not possible');
+        }
 
         for (let i = 0; i < value; i++) {
             const thisFileContent = fs.readFileSync(__filename, 'utf8');
@@ -54,7 +62,6 @@ const fromEuroToJapanYen = function (valueInEuro) {
             }
         }
     }
-    */
 
 
     return valueInYen;
