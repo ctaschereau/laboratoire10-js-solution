@@ -26,6 +26,9 @@ export default [
         ...globals.jest, // Include Jest globals
       },
     },
+    rules: {
+      "max-lines-per-function": ["error", 200], // Pour permettre à mon describe d'être plus long
+    },
   },
   pluginJs.configs.recommended,
 ];

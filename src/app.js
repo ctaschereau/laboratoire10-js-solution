@@ -1,5 +1,3 @@
-const fs = require('fs');
-
 //SECTION 1
 const sum = (a, b) => {
     return a + b;
@@ -30,7 +28,9 @@ const fromEuroToDollar = function (valueInEuro) {
 const fromEuroToJapanYen = function (valueInEuro) {
     let valueInYen = valueInEuro * oneEuroIs.JPY;
 
+    /*
     // Add useless logic that does essentially nothing just to increase complexity
+    const fs = require('fs');
     if (valueInYen > 100) {
         let value = valueInYen / 2;
         console.log(value);
@@ -54,6 +54,7 @@ const fromEuroToJapanYen = function (valueInEuro) {
             }
         }
     }
+    */
 
 
     return valueInYen;
